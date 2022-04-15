@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProgramSelection">
+
+    <TextView
+        android:id="@+id/StreamSelection_TextView_SelectStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+        android:text=" Choose a Program "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/StreamSelection_LinearLayout1"
+        app:layout_constraintTop_toBottomOf="@id/StreamSelection_TextView_SelectStream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_gravity="center"
+        android:id="@+id/StreamSelection_TextView_Undergrad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="80dp"
+        android:background="@color/teal_200"
+        android:text="UNDERGRADUATE (B.TECH/BBA)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StreamSelection_TextView_SelectStream"
+        app:layout_constraintStart_toStartOf="parent" />
+
+        <ListView
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/StreamSelection_ListView_Undergrad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <!--        app:layout_constraintTop_toBottomOf="@id/StreamSelection_TextView_Undergrad" -->
+
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/StreamSelection_LinearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/StreamSelection_LinearLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/StreamSelection_TextView_PostGrad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:background="#0277BD"
+        android:text="POSTGRADUATE (MBA/M. TECH/MSC)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StreamSelection_ListView_Undergrad"
+        app:layout_constraintStart_toStartOf="parent" />
+    <ListView
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/StreamSelection_ListView_Postgrad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StreamSelection_TextView_PostGrad" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/StreamSelection_LinearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/StreamSelection_TextView_Doctorate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_200"
+            android:padding="10dp"
+            android:text=" DOCTORATE (PHD)"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/StreamSelection_ListView_Postgrad" />
+    <ListView
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/StreamSelection_ListView_Doct"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StreamSelection_TextView_Doctorate" /></LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
